@@ -27,4 +27,3 @@ These materials were presented as a workshop at the ECOSTRESS Science Team Meeti
  Sioux Falls, South Dakota, USA. Work performed under USGS contract G15PD00467 for LP DAAC<sup>3</sup>.  
 <sup>3</sup>LP DAAC Work performed under NASA contract NNG14HH33I.  
 <sup>2</sup>Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA, USA
-n ^2^
