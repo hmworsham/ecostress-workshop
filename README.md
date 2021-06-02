@@ -12,8 +12,8 @@ These materials were presented as a workshop at the ECOSTRESS Science Team Meeti
 **5. Making Maps in QGIS**      
 ***
 # Instructions:
-1. Download and open the [Preworkshop_Instructions.docx](https://git.earthdata.nasa.gov/projects/LPDUR/repos/ecostress-workshop/raw/Preworkshop_Instructions.docx?at=refs%2Fheads%2Fmaster) file and complete each step outlined in that document.
-2. Download and open the [ECOSTRESS_Workshop_Instructions.docx](https://git.earthdata.nasa.gov/projects/LPDUR/repos/ecostress-workshop/raw/ECOSTRESS_Workshop_Instructions.docx?at=refs%2Fheads%2Fmaster) file and work through the step-by-step instructions.
+1. Download and open the [Preworkshop_Instructions.docx](https://git.earthdata.nasa.gov/projects/LPDUR/repos/ecostress-workshop/raw/Preworkshop_Instructions.docx?at=refs%2Fheads%2Fmain) file and complete each step outlined in that document.
+2. Download and open the [ECOSTRESS_Workshop_Instructions.docx](https://git.earthdata.nasa.gov/projects/LPDUR/repos/ecostress-workshop/raw/ECOSTRESS_Workshop_Instructions.docx?at=refs%2Fheads%2Fmain) file and work through the step-by-step instructions.
 ---
 # Contact Information:
 #### Author: Cole Krehbiel¹  and Gregory Halverson<sup>2</sup>

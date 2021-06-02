@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>ECOSTRESS_Tutorial</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>ECOSTRESS_Tutorial</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11605,8 +12947,13 @@ ul.typeahead-list > li > a {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -11676,45 +13023,6 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
-<style type="text/css">
     /*This file contains any manual css for this page that needs to override the global styles.
 This is only required when different pages style the same element differently. This is just
 a hack to deal with our current css styles and no new styling should be added in this file.*/
@@ -11760,7 +13068,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11785,11 +13093,10 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Working-with-ECOSTRESS-Evapotranspiration-Data">Working with ECOSTRESS Evapotranspiration Data<a class="anchor-link" href="#Working-with-ECOSTRESS-Evapotranspiration-Data">&#182;</a></h1><h3 id="This-tutorial-demonstrates-how-to-work-with-the-ECOSTRESS-Evapotranspiration-PT-JPL-Daily-L3-Global-70m-Version-1-(ECO3ETPTJPL.001)-data-product-in-Python.">This tutorial demonstrates how to work with the ECOSTRESS Evapotranspiration PT-JPL Daily L3 Global 70m Version 1 (<a href="https://doi.org/10.5067/ECOSTRESS/ECO3ETPTJPL.001">ECO3ETPTJPL.001</a>) data product in Python.<a class="anchor-link" href="#This-tutorial-demonstrates-how-to-work-with-the-ECOSTRESS-Evapotranspiration-PT-JPL-Daily-L3-Global-70m-Version-1-(ECO3ETPTJPL.001)-data-product-in-Python.">&#182;</a></h3><p>The Land Processes Distributed Active Archive Center (LP DAAC) distributes the Ecosystem Spaceborne Thermal Radiometer Experiment on Space Station (<a href="https://ecostress.jpl.nasa.gov/">ECOSTRESS</a>) data products. The ECOSTRESS mission is tasked with measuring the temperature of plants in to  better understand how much water plants need and how they respond to stress.  ECOSTRESS products are archived and distributed in the HDF5 file format as swath-based products.</p>
-<p>In this tutorial, you will use Python to perform a swath to grid conversion to project the swath data unto a grid with a defined coordinate reference system (CRS), compare ECOSTRESS data with ground-based AmeriFlux flux tower observations, and export science dataset (SDS) layers as GeoTIFF files that can be loaded into a GIS and/or Remote Sensing software program.</p>
+<h1 id="Working-with-ECOSTRESS-Evapotranspiration-Data">Working with ECOSTRESS Evapotranspiration Data<a class="anchor-link" href="#Working-with-ECOSTRESS-Evapotranspiration-Data">&#182;</a></h1><h3 id="This-tutorial-demonstrates-how-to-work-with-the-ECOSTRESS-Evapotranspiration-PT-JPL-Daily-L3-Global-70m-Version-1-(ECO3ETPTJPL.001)-data-product-in-Python.">This tutorial demonstrates how to work with the ECOSTRESS Evapotranspiration PT-JPL Daily L3 Global 70m Version 1 (<a href="https://doi.org/10.5067/ECOSTRESS/ECO3ETPTJPL.001">ECO3ETPTJPL.001</a>) data product in Python.<a class="anchor-link" href="#This-tutorial-demonstrates-how-to-work-with-the-ECOSTRESS-Evapotranspiration-PT-JPL-Daily-L3-Global-70m-Version-1-(ECO3ETPTJPL.001)-data-product-in-Python.">&#182;</a></h3><p>The Land Processes Distributed Active Archive Center (LP DAAC) distributes the Ecosystem Spaceborne Thermal Radiometer Experiment on Space Station (<a href="https://ecostress.jpl.nasa.gov/">ECOSTRESS</a>) data products. The ECOSTRESS mission is tasked with measuring the temperature of plants to  better understand how much water plants need and how they respond to stress.  ECOSTRESS products are archived and distributed in the HDF5 file format as swath-based products.</p>
+<p>In this tutorial, you will use Python to perform a swath to grid conversion to project the swath data on to a grid with a defined coordinate reference system (CRS), compare ECOSTRESS data with ground-based AmeriFlux flux tower observations, and export science dataset (SDS) layers as GeoTIFF files that can be loaded into a GIS and/or Remote Sensing software program.</p>
 <hr>
 <h3 id="Example:-Converting-a-swath-ECO3ETPTJPL.001-HDF5-file-into-a-GeoTIFF-with-a-defined-CRS-and-comparing-ECOSTRESS-Evapotranspiration-(ET)-with-ground-based-ET-observations-from-an-AmeriFlux-flux-tower-location-in-California.">Example: Converting a swath ECO3ETPTJPL.001 HDF5 file into a GeoTIFF with a defined CRS and comparing ECOSTRESS Evapotranspiration (ET) with ground-based ET observations from an AmeriFlux flux tower location in California.<a class="anchor-link" href="#Example:-Converting-a-swath-ECO3ETPTJPL.001-HDF5-file-into-a-GeoTIFF-with-a-defined-CRS-and-comparing-ECOSTRESS-Evapotranspiration-(ET)-with-ground-based-ET-observations-from-an-AmeriFlux-flux-tower-location-in-California.">&#182;</a></h3><h4 id="Data-Used-in-the-Example:">Data Used in the Example:<a class="anchor-link" href="#Data-Used-in-the-Example:">&#182;</a></h4><ul>
 <li>Data Product: ECOSTRESS Evapotranspiration PT-JPL Daily L3 Global 70m Version 1 (<a href="https://doi.org/10.5067/ECOSTRESS/ECO3ETPTJPL.001">ECO3ETPTJPL.001</a>)  <ul>
@@ -11862,7 +13169,7 @@ div#notebook {
 <li>ECOSTRESS_L1B_GEO_00468_007_20180805T220314_0502_02.h5 </li>
 <li>ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5   </li>
 </ul>
-<p>The AmeriFlux Latent Heat data used in Section 4 can be downloaded via a <a href="https://git.earthdata.nasa.gov/projects/LPDUR/repos/tutorial-ecostress/raw/tower_data.csv?at=refs%2Fheads%2Fmaster">csv file</a></p>
+<p>The AmeriFlux Latent Heat data used in Section 4 can be downloaded via a <a href="https://git.earthdata.nasa.gov/projects/LPDUR/repos/tutorial-ecostress/raw/tower_data.csv?at=refs%2Fheads%2Fmain">csv file</a></p>
 <h3 id="Source-Code-used-to-Generate-this-Tutorial:">Source Code used to Generate this Tutorial:<a class="anchor-link" href="#Source-Code-used-to-Generate-this-Tutorial:">&#182;</a></h3><ul>
 <li><a href="https://git.earthdata.nasa.gov/projects/LPDUR/repos/tutorial-ecostress/browse/ECOSTRESS_Tutorial.ipynb">Jupyter Notebook</a>   </li>
 </ul>
@@ -11873,8 +13180,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>1. Getting Started</center></h1><hr>
@@ -11890,30 +13196,29 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import packages</span>
 <span class="kn">import</span> <span class="nn">h5py</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">os.path</span> <span class="k">import</span> <span class="n">join</span>
+<span class="kn">from</span> <span class="nn">os.path</span> <span class="kn">import</span> <span class="n">join</span>
 <span class="kn">import</span> <span class="nn">pyproj</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">dateutil</span> <span class="k">import</span> <span class="n">parser</span>
+<span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="k">import</span> <span class="n">LinearSegmentedColormap</span>
-<span class="kn">from</span> <span class="nn">pyresample</span> <span class="k">import</span> <span class="n">geometry</span> <span class="k">as</span> <span class="n">geom</span>
-<span class="kn">from</span> <span class="nn">pyresample</span> <span class="k">import</span> <span class="n">kd_tree</span> <span class="k">as</span> <span class="n">kdt</span>
-<span class="kn">from</span> <span class="nn">osgeo</span> <span class="k">import</span> <span class="n">gdal</span><span class="p">,</span> <span class="n">gdal_array</span><span class="p">,</span> <span class="n">gdalconst</span><span class="p">,</span> <span class="n">osr</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">LinearSegmentedColormap</span>
+<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">geometry</span> <span class="k">as</span> <span class="n">geom</span>
+<span class="kn">from</span> <span class="nn">pyresample</span> <span class="kn">import</span> <span class="n">kd_tree</span> <span class="k">as</span> <span class="n">kdt</span>
+<span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span><span class="p">,</span> <span class="n">gdal_array</span><span class="p">,</span> <span class="n">gdalconst</span><span class="p">,</span> <span class="n">osr</span>
 
 <span class="c1"># Set plots inside of the Jupyter Notebook</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="1b.-Set-Up-the-Working-Environment">1b. Set Up the Working Environment<a class="anchor-link" href="#1b.-Set-Up-the-Working-Environment">&#182;</a></h2><h4 id="The-input-directory-is-defined-as-the-current-working-directory.-Note-that-you-will-need-to-have-the-jupyter-notebook-and-example-data-(.h5-and-.csv)-stored-in-this-directory-in-order-to-execute-the-tutorial-successfully.">The input directory is defined as the current working directory. Note that you will need to have the jupyter notebook and example data (.h5 and .csv) stored in this directory in order to execute the tutorial successfully.<a class="anchor-link" href="#The-input-directory-is-defined-as-the-current-working-directory.-Note-that-you-will-need-to-have-the-jupyter-notebook-and-example-data-(.h5-and-.csv)-stored-in-this-directory-in-order-to-execute-the-tutorial-successfully.">&#182;</a></h4>
@@ -11938,7 +13243,7 @@ div#notebook {
     <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">outDir</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -11948,7 +13253,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -11965,16 +13270,14 @@ C:\ECOSTRESS\output\
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Make-sure-that-the-ECOSTRESS-.h5-data-files,-and-Ameriflux-ET-data-file-(.csv)-are-located-in-the-input-directory-printed-above.">Make sure that the ECOSTRESS .h5 data files, and Ameriflux ET data file (.csv) are located in the input directory printed above.<a class="anchor-link" href="#Make-sure-that-the-ECOSTRESS-.h5-data-files,-and-Ameriflux-ET-data-file-(.csv)-are-located-in-the-input-directory-printed-above.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="1c.-Retrieve-Files">1c. Retrieve Files<a class="anchor-link" href="#1c.-Retrieve-Files">&#182;</a></h2><h4 id="Make-sure-that-the-ECO1BGEO-and-ECO3ETPTJPL-.h5-files-listed-in-the-directions-have-been-downloaded-to-the-inDir-defined-above-to-follow-along-in-the-tutorial.">Make sure that the ECO1BGEO and ECO3ETPTJPL .h5 files listed in the directions have been downloaded to the <code>inDir</code> defined above to follow along in the tutorial.<a class="anchor-link" href="#Make-sure-that-the-ECO1BGEO-and-ECO3ETPTJPL-.h5-files-listed-in-the-directions-have-been-downloaded-to-the-inDir-defined-above-to-follow-along-in-the-tutorial.">&#182;</a></h4>
@@ -11993,7 +13296,7 @@ C:\ECOSTRESS\output\
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;products:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ecoList</span><span class="p">)))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12003,7 +13306,7 @@ C:\ECOSTRESS\output\
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12020,8 +13323,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="The-standard-format--for-ECOSTRESS-filenames-is-as-follows:">The standard format  for ECOSTRESS filenames is as follows:<a class="anchor-link" href="#The-standard-format--for-ECOSTRESS-filenames-is-as-follows:">&#182;</a></h4><blockquote><p><strong>ECOSTRESS_L3_ET_PT-JPL</strong>:     Product Type<br>
 <strong>00468</strong>:      Orbit number; starting at start of mission, ascending equatorial crossing<br>
@@ -12035,8 +13337,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>2. Importing and Interpreting Data</center></h1><hr>
@@ -12054,7 +13355,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="nb">print</span><span class="p">(</span><span class="n">ecoName</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12064,7 +13365,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12078,8 +13379,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="2b.-Subset-SDS-Layers-and-read-SDS-Metadata">2b. Subset SDS Layers and read SDS Metadata<a class="anchor-link" href="#2b.-Subset-SDS-Layers-and-read-SDS-Metadata">&#182;</a></h2><h4 id="Identify-and-generate-a-list-of-all-the-SDS-layers-in-the-HDF5-file.">Identify and generate a list of all the SDS layers in the HDF5 file.<a class="anchor-link" href="#Identify-and-generate-a-list-of-all-the-SDS-layers-in-the-HDF5-file.">&#182;</a></h4>
@@ -12099,7 +13399,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
     <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12109,7 +13409,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12132,8 +13432,7 @@ L3_ET_PT-JPL Metadata/AncillaryFileAlbedo
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Below,-subset-the-SDS-list-to-the-two-layers-needed-for-comparison-with-the-ground-based-AmeriFlux-data,-ETinst-and-ETinstUncertainty.">Below, subset the SDS list to the two layers needed for comparison with the ground-based AmeriFlux data, <code>ETinst</code> and <code>ETinstUncertainty</code>.<a class="anchor-link" href="#Below,-subset-the-SDS-list-to-the-two-layers-needed-for-comparison-with-the-ground-based-AmeriFlux-data,-ETinst-and-ETinstUncertainty.">&#182;</a></h4>
 </div>
@@ -12151,7 +13450,7 @@ L3_ET_PT-JPL Metadata/AncillaryFileAlbedo
     <span class="nb">print</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12161,7 +13460,7 @@ L3_ET_PT-JPL Metadata/AncillaryFileAlbedo
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12176,8 +13475,7 @@ ETinstUncertainty
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>3. Performing Swath2grid Conversion</center></h1><h4 id="Resample-the-native-ECOSTRESS-swath-data-to-a-grid-with-defined-coordinate-reference-system-(CRS).">Resample the native ECOSTRESS swath data to a grid with defined coordinate reference system (CRS).<a class="anchor-link" href="#Resample-the-native-ECOSTRESS-swath-data-to-a-grid-with-defined-coordinate-reference-system-(CRS).">&#182;</a></h4><hr>
@@ -12196,7 +13494,7 @@ ETinstUncertainty
 <span class="nb">print</span><span class="p">(</span><span class="n">ecoList</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12206,7 +13504,7 @@ ETinstUncertainty
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12221,8 +13519,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Read-in-the-ECO1BGEO-file,-search-for-the-latitude-and-longitude-SDS,-and-import-into-Python-as-arrays.">Read in the ECO1BGEO file, search for the <code>latitude</code> and <code>longitude</code> SDS, and import into Python as arrays.<a class="anchor-link" href="#Read-in-the-ECO1BGEO-file,-search-for-the-latitude-and-longitude-SDS,-and-import-into-Python-as-arrays.">&#182;</a></h4>
 </div>
@@ -12251,7 +13548,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="nb">print</span><span class="p">(</span><span class="n">dims</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12261,7 +13558,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12275,8 +13572,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="3b.-Define-Projection-and-Output-Grid">3b. Define Projection and Output Grid<a class="anchor-link" href="#3b.-Define-Projection-and-Output-Grid">&#182;</a></h2><h4 id="The-latitude-and-longitude-arrays-from-the-ECO1BGEO-product-for-the-same-ECOSTRESS-orbit/scene-ID-are-needed-to-perform-the-swath2grid-conversion-on-the-ECO3ETPT-JPL-file.">The <code>latitude</code> and <code>longitude</code> arrays from the ECO1BGEO product for the same ECOSTRESS orbit/scene ID are needed to perform the swath2grid conversion on the ECO3ETPT-JPL file.<a class="anchor-link" href="#The-latitude-and-longitude-arrays-from-the-ECO1BGEO-product-for-the-same-ECOSTRESS-orbit/scene-ID-are-needed-to-perform-the-swath2grid-conversion-on-the-ECO3ETPT-JPL-file.">&#182;</a></h4><h4 id="The-following-sections-use-the-pyresample-package-to-resample-the-ECOSTRESS-swath-dataset-to-a-grid-using-nearest-neighbor-method.-This-process-begins-by-defining-the-swath-dimensions-using-the-lat/lon-arrays-below.">The following sections use the <a href="https://pyresample.readthedocs.io/en/stable/">pyresample package</a> to resample the ECOSTRESS swath dataset to a grid using nearest neighbor method. This process begins by defining the swath dimensions using the lat/lon arrays below.<a class="anchor-link" href="#The-following-sections-use-the-pyresample-package-to-resample-the-ECOSTRESS-swath-dataset-to-a-grid-using-nearest-neighbor-method.-This-process-begins-by-defining-the-swath-dimensions-using-the-lat/lon-arrays-below.">&#182;</a></h4>
@@ -12293,7 +13589,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="n">swathDef</span><span class="o">.</span><span class="n">corners</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12303,7 +13599,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12322,8 +13618,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Define-the-coordinates-in-the-middle-of-the-swath,-which-are-used-to-calculate-an-estimate-of-the-output-rows/columns-for-the-gridded-output.">Define the coordinates in the middle of the swath, which are used to calculate an estimate of the output rows/columns for the gridded output.<a class="anchor-link" href="#Define-the-coordinates-in-the-middle-of-the-swath,-which-are-used-to-calculate-an-estimate-of-the-output-rows/columns-for-the-gridded-output.">&#182;</a></h4>
 </div>
@@ -12340,7 +13635,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="n">midLat</span><span class="p">,</span> <span class="n">midLon</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12350,7 +13645,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12366,8 +13661,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Below,-pyproj.Proj-is-used-to-perform-a-cartographic-transformation-by-defining-an-Azimuthal-Equidistant-projection-centered-on-the-midpoint-of-the-swath.-Once-the-projection-is-defined,-convert-the-lower-left-and-upper-right-corners-of-the-lat/lon-arrays-to-a-location-(in-meters)-in-the-new-projection.-Lastly,-measure-the-distance-between-the-corners-and-divide-by-70-(meters),-the-nominal-pixel-size-that-we-are-aiming-for.-Azimuthal-Equidistant-projection-was-chosen-here-based-on-the-following-characteristics-of-this-projection:">Below, <code>pyproj.Proj</code> is used to perform a cartographic transformation by defining an Azimuthal Equidistant projection centered on the midpoint of the swath. Once the projection is defined, convert the lower left and upper right corners of the lat/lon arrays to a location (in meters) in the new projection. Lastly, measure the distance between the corners and divide by 70 (meters), the nominal pixel size that we are aiming for. Azimuthal Equidistant projection was chosen here based on the following characteristics of this projection:<a class="anchor-link" href="#Below,-pyproj.Proj-is-used-to-perform-a-cartographic-transformation-by-defining-an-Azimuthal-Equidistant-projection-centered-on-the-midpoint-of-the-swath.-Once-the-projection-is-defined,-convert-the-lower-left-and-upper-right-corners-of-the-lat/lon-arrays-to-a-location-(in-meters)-in-the-new-projection.-Lastly,-measure-the-distance-between-the-corners-and-divide-by-70-(meters),-the-nominal-pixel-size-that-we-are-aiming-for.-Azimuthal-Equidistant-projection-was-chosen-here-based-on-the-following-characteristics-of-this-projection:">&#182;</a></h4><ul>
 <li>Units in meters (necessary for defining 70 m pixels)  </li>
@@ -12394,14 +13688,13 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="n">rows</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">areaExtent</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">-</span> <span class="n">areaExtent</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">70</span><span class="p">))</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Use-number-of-rows-and-columns-generated-above-from-the-AEQD-projection-to-set-a-representative-number-of-rows-and-columns-in-the-Geographic--area-definition,-which-will-then-be-translated-to-degrees-below,-then-take-the-smaller-of-the-two-pixel-dims-to-determine-output-size-and-ensure-square-pixels.">Use number of rows and columns generated above from the AEQD projection to set a representative number of rows and columns in the Geographic  area definition, which will then be translated to degrees below, then take the smaller of the two pixel dims to determine output size and ensure square pixels.<a class="anchor-link" href="#Use-number-of-rows-and-columns-generated-above-from-the-AEQD-projection-to-set-a-representative-number-of-rows-and-columns-in-the-Geographic--area-definition,-which-will-then-be-translated-to-degrees-below,-then-take-the-smaller-of-the-two-pixel-dims-to-determine-output-size-and-ensure-square-pixels.">&#182;</a></h4>
 </div>
@@ -12425,7 +13718,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 <span class="n">areaDef</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12435,7 +13728,7 @@ ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02.h5
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12457,8 +13750,7 @@ Area extent: (-121.8667573806392, 34.220901494817554, -115.71680093109661, 39.05
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Below,-square-the-pixels-by-setting-the-pixel-size-to-the-smaller-of-the-x-any-y-values-output-by-the-AreaDefinition,-then-use-the-pixel-size-to-recalculate-the-number-of-output-cols/rows.">Below, square the pixels by setting the pixel size to the smaller of the x any y values output by the <code>AreaDefinition</code>, then use the pixel size to recalculate the number of output cols/rows.<a class="anchor-link" href="#Below,-square-the-pixels-by-setting-the-pixel-size-to-the-smaller-of-the-x-any-y-values-output-by-the-AreaDefinition,-then-use-the-pixel-size-to-recalculate-the-number-of-output-cols/rows.">&#182;</a></h4>
 </div>
@@ -12478,14 +13770,13 @@ Area extent: (-121.8667573806392, 34.220901494817554, -115.71680093109661, 39.05
 <span class="n">areaDef</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">AreaDefinition</span><span class="p">(</span><span class="n">epsg</span><span class="p">,</span> <span class="n">pName</span><span class="p">,</span> <span class="n">proj</span><span class="p">,</span> <span class="n">projDict</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">rows</span><span class="p">,</span> <span class="n">areaExtent</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Below,-use-pyresample-kd_tree's-get_neighbour_info-to-create-arrays-with-information-on-the-nearest-neighbor-to-each-grid-point.">Below, use <code>pyresample kd_tree</code>'s <a href="https://pyresample.readthedocs.io/en/latest/swath.html#resampling-from-neighbour-info">get_neighbour_info</a> to create arrays with information on the nearest neighbor to each grid point.<a class="anchor-link" href="#Below,-use-pyresample-kd_tree's-get_neighbour_info-to-create-arrays-with-information-on-the-nearest-neighbor-to-each-grid-point.">&#182;</a></h4><h4 id="This-is-the-most-computationally-heavy-task-in-the-swath2grid-conversion-and-using-get_neighbour_info-speeds-up-the-process-if-you-plan-to-resample-multiple-SDS-within-an-ECOSTRESS-product-(compute-once-instead-of-for-every-SDS).">This is the most computationally heavy task in the swath2grid conversion and using <code>get_neighbour_info</code> speeds up the process if you plan to resample multiple SDS within an ECOSTRESS product (compute once instead of for every SDS).<a class="anchor-link" href="#This-is-the-most-computationally-heavy-task-in-the-swath2grid-conversion-and-using-get_neighbour_info-speeds-up-the-process-if-you-plan-to-resample-multiple-SDS-within-an-ECOSTRESS-product-(compute-once-instead-of-for-every-SDS).">&#182;</a></h4>
 </div>
@@ -12500,22 +13791,20 @@ Area extent: (-121.8667573806392, 34.220901494817554, -115.71680093109661, 39.05
 <span class="n">index</span><span class="p">,</span> <span class="n">outdex</span><span class="p">,</span> <span class="n">indexArr</span><span class="p">,</span> <span class="n">distArr</span> <span class="o">=</span> <span class="n">kdt</span><span class="o">.</span><span class="n">get_neighbour_info</span><span class="p">(</span><span class="n">swathDef</span><span class="p">,</span> <span class="n">areaDef</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="n">neighbours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Above,-the-function-is-comparing-the-swath-and-area-definitions-to-locate-the-nearest-neighbor-(neighbours=1).-210-is-the-radius_of_influence,-or-the-radius-used-to-search-for-the-nearest-neighboring-pixel-in-the-swath-(in-meters).">Above, the function is comparing the swath and area definitions to locate the nearest neighbor (neighbours=1). 210 is the <code>radius_of_influence</code>, or the radius used to search for the nearest neighboring pixel in the swath (in meters).<a class="anchor-link" href="#Above,-the-function-is-comparing-the-swath-and-area-definitions-to-locate-the-nearest-neighbor-(neighbours=1).-210-is-the-radius_of_influence,-or-the-radius-used-to-search-for-the-nearest-neighboring-pixel-in-the-swath-(in-meters).">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="3c.-Read-SDS-Metadata">3c. Read SDS Metadata<a class="anchor-link" href="#3c.-Read-SDS-Metadata">&#182;</a></h2><h4 id="List-the-attributes-for-the-ETinst-layer,-which-can-then-be-used-to-define-the-fill-value-and-scale-factor.">List the attributes for the <code>ETinst</code> layer, which can then be used to define the fill value and scale factor.<a class="anchor-link" href="#List-the-attributes-for-the-ETinst-layer,-which-can-then-be-used-to-define-the-fill-value-and-scale-factor.">&#182;</a></h4>
@@ -12532,12 +13821,12 @@ Area extent: (-121.8667573806392, 34.220901494817554, -115.71680093109661, 39.05
 <span class="n">ecoSD</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> 
 <span class="k">for</span> <span class="n">attr</span> <span class="ow">in</span> <span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="n">attr</span><span class="p">])</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{attr}</span><span class="s1"> = </span><span class="si">{f[s].attrs[attr][0]}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="n">attr</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{attr}</span><span class="s1"> = {f[s].attrs[attr].decode(&quot;utf-8&quot;)}&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">attr</span><span class="si">}</span><span class="s1"> = </span><span class="si">{</span><span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12547,7 +13836,7 @@ Area extent: (-121.8667573806392, 34.220901494817554, -115.71680093109661, 39.05
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12565,8 +13854,7 @@ valid_min = 0.0
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Extract-the-scale-factor,-add-offset-and-fill-value-from-the-SDS-metadata.">Extract the scale factor, add offset and fill value from the SDS metadata.<a class="anchor-link" href="#Extract-the-scale-factor,-add-offset-and-fill-value-from-the-SDS-metadata.">&#182;</a></h4>
 </div>
@@ -12598,14 +13886,13 @@ valid_min = 0.0
     <span class="n">units</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="3d.-Perform-K-D-Tree-Resampling">3d. Perform K-D Tree Resampling<a class="anchor-link" href="#3d.-Perform-K-D-Tree-Resampling">&#182;</a></h2><h4 id="Remember-that-the-resampling-has-been-split-into-two-steps.-In-section-3b.-arrays-containing-the-nearest-neighbor-to-each-grid-point-were-created.-The-second-step-is-to-use-those-arrays-to-retrieve-a-resampled-result.">Remember that the resampling has been split into two steps. In section 3b. arrays containing the nearest neighbor to each grid point were created. The second step is to use those arrays to retrieve a resampled result.<a class="anchor-link" href="#Remember-that-the-resampling-has-been-split-into-two-steps.-In-section-3b.-arrays-containing-the-nearest-neighbor-to-each-grid-point-were-created.-The-second-step-is-to-use-those-arrays-to-retrieve-a-resampled-result.">&#182;</a></h4>
@@ -12621,14 +13908,13 @@ valid_min = 0.0
 <span class="n">ETgeo</span> <span class="o">=</span> <span class="n">kdt</span><span class="o">.</span><span class="n">get_sample_from_neighbour_info</span><span class="p">(</span><span class="s1">&#39;nn&#39;</span><span class="p">,</span> <span class="n">areaDef</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">ecoSD</span><span class="p">,</span> <span class="n">index</span><span class="p">,</span> <span class="n">outdex</span><span class="p">,</span> <span class="n">indexArr</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">fv</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Above,-resample-the-swath-ecoSD-array-using-nearest-neighbor-(already-calculated-in-section-3b.-and-defined-above-as-the-index,-outdex,-and-indexArr),-and-also-set-the-fill-value-that-was-defined-in-section-3c.">Above, resample the swath <code>ecoSD</code> array using nearest neighbor (already calculated in section 3b. and defined above as the <code>index</code>, <code>outdex</code>, and <code>indexArr</code>), and also set the fill value that was defined in section 3c.<a class="anchor-link" href="#Above,-resample-the-swath-ecoSD-array-using-nearest-neighbor-(already-calculated-in-section-3b.-and-defined-above-as-the-index,-outdex,-and-indexArr),-and-also-set-the-fill-value-that-was-defined-in-section-3c.">&#182;</a></h4><h4 id="Below,-define-the-geotransform-for-the-output-(upper-left-x,-horizontal-pixel-size,-rotation,-upper-left-y,-rotation,-vertical-pixel-size).">Below, define the geotransform for the output (upper left x, horizontal pixel size, rotation, upper left y, rotation, vertical pixel size).<a class="anchor-link" href="#Below,-define-the-geotransform-for-the-output-(upper-left-x,-horizontal-pixel-size,-rotation,-upper-left-y,-rotation,-vertical-pixel-size).">&#182;</a></h4>
 </div>
@@ -12644,7 +13930,7 @@ valid_min = 0.0
 <span class="n">gt</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12654,7 +13940,7 @@ valid_min = 0.0
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -12675,8 +13961,7 @@ valid_min = 0.0
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="3e.-Basic-Image-Processing">3e. Basic Image Processing<a class="anchor-link" href="#3e.-Basic-Image-Processing">&#182;</a></h2><h4 id="Apply-the-scale-factor-and-add-offset-and-set-the-fill-value-defined-in-the-previous-section-on-the-resampled-data.">Apply the scale factor and add offset and set the fill value defined in the previous section on the resampled data.<a class="anchor-link" href="#Apply-the-scale-factor-and-add-offset-and-set-the-fill-value-defined-in-the-previous-section-on-the-resampled-data.">&#182;</a></h4>
@@ -12692,14 +13977,13 @@ valid_min = 0.0
 <span class="n">ETgeo</span><span class="p">[</span><span class="n">ETgeo</span> <span class="o">==</span> <span class="n">fv</span> <span class="o">*</span> <span class="n">sf</span> <span class="o">+</span> <span class="n">add_off</span><span class="p">]</span> <span class="o">=</span> <span class="n">fv</span>  <span class="c1"># Set Fill Value</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Rerun-steps-3c---3e-for-ETinstUncertainty.">Rerun steps 3c - 3e for <code>ETinstUncertainty</code>.<a class="anchor-link" href="#Rerun-steps-3c---3e-for-ETinstUncertainty.">&#182;</a></h4>
 </div>
@@ -12731,14 +14015,13 @@ valid_min = 0.0
 <span class="n">UNgeo</span><span class="p">[</span><span class="n">UNgeo</span> <span class="o">==</span> <span class="n">fv</span> <span class="o">*</span> <span class="n">sf</span> <span class="o">+</span> <span class="n">add_off</span><span class="p">]</span> <span class="o">=</span> <span class="n">fv</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>4. Exporting Results</center></h1><hr>
@@ -12755,14 +14038,13 @@ valid_min = 0.0
 <span class="n">outFiles</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ETinst&#39;</span><span class="p">:</span> <span class="n">ETgeo</span><span class="p">,</span> <span class="s1">&#39;ETinstUncertainty&#39;</span><span class="p">:</span> <span class="n">UNgeo</span><span class="p">}</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="4b.-Define-CRS-and-Export-as-GeoTIFFs">4b. Define CRS and Export as GeoTIFFs<a class="anchor-link" href="#4b.-Define-CRS-and-Export-as-GeoTIFFs">&#182;</a></h2><h4 id="Now-that-the-data-have-been-imported-and-resampled-into-a-gridded-raster-array,-export-the-results-as-GeoTIFFs-using-a-for-loop-in-this-section.">Now that the data have been imported and resampled into a gridded raster array, export the results as GeoTIFFs using a <code>for</code> loop in this section.<a class="anchor-link" href="#Now-that-the-data-have-been-imported-and-resampled-into-a-gridded-raster-array,-export-the-results-as-GeoTIFFs-using-a-for-loop-in-this-section.">&#182;</a></h4>
@@ -12811,7 +14093,7 @@ valid_min = 0.0
     <span class="n">d</span><span class="p">,</span> <span class="n">band</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>    
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12821,7 +14103,7 @@ valid_min = 0.0
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -12840,8 +14122,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>5. Combining ECOSTRESS and AmeriFlux Tower Data</center></h1><hr>
@@ -12861,14 +14142,13 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">towerData</span> <span class="o">=</span> <span class="n">towerData</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Next,-use-the-parser-package-and-a-lambda-function-to-go-through-each-time-stamp-and-reformat-to-date-and-time-objects.">Next, use the <code>parser</code> package and a lambda function to go through each time stamp and reformat to date and time objects.<a class="anchor-link" href="#Next,-use-the-parser-package-and-a-lambda-function-to-go-through-each-time-stamp-and-reformat-to-date-and-time-objects.">&#182;</a></h4>
 </div>
@@ -12886,7 +14166,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">towerData</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -12896,7 +14176,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[24]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13063,8 +14343,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="5b.-Locate-ECOSTRESS-Pixel-from-Lat/Lon-Coordinates">5b. Locate ECOSTRESS Pixel from Lat/Lon Coordinates<a class="anchor-link" href="#5b.-Locate-ECOSTRESS-Pixel-from-Lat/Lon-Coordinates">&#182;</a></h2><h4 id="Calculate-the-gridded-pixel-nearest-to-the-tower-location.">Calculate the gridded pixel nearest to the tower location.<a class="anchor-link" href="#Calculate-the-gridded-pixel-nearest-to-the-tower-location.">&#182;</a></h4>
@@ -13086,7 +14365,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">ETgeo</span><span class="p">[</span><span class="n">Trow</span><span class="p">,</span> <span class="n">Tcol</span><span class="p">]</span>                               
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13096,7 +14375,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13112,8 +14391,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>6. Visualizing Data</center></h1><hr>
@@ -13131,14 +14409,13 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">ETcmap</span> <span class="o">=</span> <span class="n">LinearSegmentedColormap</span><span class="o">.</span><span class="n">from_list</span><span class="p">(</span><span class="s2">&quot;ET&quot;</span><span class="p">,</span> <span class="n">ETcolors</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="6b.-Calculate-Local-Overpass-Time">6b. Calculate Local Overpass Time<a class="anchor-link" href="#6b.-Calculate-Local-Overpass-Time">&#182;</a></h2><h4 id="ECOSTRESS-observation-times-are-reported-in-Universal-Time-Coordinated-(UTC).-Below,-grab-the-observation-time-from-the-filename-and-convert-to-local-time-using-the-longitude-location-of-the-tower.">ECOSTRESS observation times are reported in Universal Time Coordinated (UTC). Below, grab the observation time from the filename and convert to local time using the longitude location of the tower.<a class="anchor-link" href="#ECOSTRESS-observation-times-are-reported-in-Universal-Time-Coordinated-(UTC).-Below,-grab-the-observation-time-from-the-filename-and-convert-to-local-time-using-the-longitude-location-of-the-tower.">&#182;</a></h4>
@@ -13155,7 +14432,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">ecoTime</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13165,7 +14442,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -13181,8 +14458,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Next,-convert-UTC-observation-time-to-local-overpass-time.">Next, convert UTC observation time to local overpass time.<a class="anchor-link" href="#Next,-convert-UTC-observation-time-to-local-overpass-time.">&#182;</a></h4>
 </div>
@@ -13199,14 +14475,13 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">date</span> <span class="o">=</span> <span class="n">observationTime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="6c.-Plot-ET-Data">6c. Plot ET Data<a class="anchor-link" href="#6c.-Plot-ET-Data">&#182;</a></h2><h4 id="In-this-section,-begin-by-highlighting-the-functionality-of-the-matplotlib-plotting-package.-First,-make-a-plot-of-the-entire-gridded-ET-output.-Next,-zoom-in-on-the-tower-location-and-add-some-additional-parameters-to-the-plot.-Finally,-export-the-completed-plot-to-an-image-file.">In this section, begin by highlighting the functionality of the <code>matplotlib</code> plotting package. First, make a plot of the entire gridded ET output. Next, zoom in on the tower location and add some additional parameters to the plot. Finally, export the completed plot to an image file.<a class="anchor-link" href="#In-this-section,-begin-by-highlighting-the-functionality-of-the-matplotlib-plotting-package.-First,-make-a-plot-of-the-entire-gridded-ET-output.-Next,-zoom-in-on-the-tower-location-and-add-some-additional-parameters-to-the-plot.-Finally,-export-the-completed-plot-to-an-image-file.">&#182;</a></h4>
@@ -13221,16 +14496,16 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;ECO3ETPTJPL Evapotranspiration&#39;</span>
 <span class="n">SDSname</span> <span class="o">=</span> <span class="n">ecoSDS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">9.7</span><span class="p">,</span><span class="mf">7.6</span><span class="p">))</span>                                                       <span class="c1"># Set the figure size (x,y)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{title}</span><span class="s1"> ({ecoSDS[0].split(&quot;/&quot;)[-1]})</span><span class="se">\n</span><span class="si">{date}</span><span class="s1"> at </span><span class="si">{overpass}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>  <span class="c1"># Add title for the plots</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">ecoSDS</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"> at </span><span class="si">{</span><span class="n">overpass</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>  <span class="c1"># Add title for the plots</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>                                                                           <span class="c1"># Remove axes from plot</span>
 <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ETgeo</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">ETcmap</span><span class="p">);</span>                                                        <span class="c1"># Plot array using colormap</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tcol</span><span class="p">,</span> <span class="n">Trow</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>                                        <span class="c1"># Plot tower location</span>
 
 <span class="c1"># Add a colormap legend</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.004</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;ET (</span><span class="si">{units}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span><span class="o">.</span><span class="n">outline</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.004</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;ET (</span><span class="si">{</span><span class="n">units</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span><span class="o">.</span><span class="n">outline</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13240,7 +14515,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13258,8 +14533,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="6d.-Exporting-an-Image">6d. Exporting an Image<a class="anchor-link" href="#6d.-Exporting-an-Image">&#182;</a></h2><h4 id="Zoom-in-to-get-a-closer-look-at-the-region-surrounding-the-AmeriFlux-tower-by-creating-a-subset.">Zoom in to get a closer look at the region surrounding the AmeriFlux tower by creating a subset.<a class="anchor-link" href="#Zoom-in-to-get-a-closer-look-at-the-region-surrounding-the-AmeriFlux-tower-by-creating-a-subset.">&#182;</a></h4>
@@ -13276,14 +14550,13 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">ETsubset</span> <span class="o">=</span> <span class="n">ETgeo</span><span class="p">[(</span><span class="n">Trow</span> <span class="o">-</span> <span class="n">radius</span><span class="p">):(</span><span class="n">Trow</span> <span class="o">+</span> <span class="n">radius</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">Tcol</span> <span class="o">-</span> <span class="n">radius</span><span class="p">):(</span><span class="n">Tcol</span> <span class="o">+</span> <span class="n">radius</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Make-another-plot,-this-time-zoomed-in-to-the-tower-location.-Export-the-plot-as-a-.png-file.">Make another plot, this time zoomed in to the tower location. Export the plot as a .png file.<a class="anchor-link" href="#Make-another-plot,-this-time-zoomed-in-to-the-tower-location.-Export-the-plot-as-a-.png-file.">&#182;</a></h4>
 </div>
@@ -13295,13 +14568,13 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>                                                 <span class="c1"># Set the figure size (x,y)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{title}</span><span class="s1"> (</span><span class="si">{SDSname}</span><span class="s1">)</span><span class="se">\n</span><span class="si">{date}</span><span class="s1"> at </span><span class="si">{overpass}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>           <span class="c1"># Add title for the plots</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">SDSname</span><span class="si">}</span><span class="s1">)</span><span class="se">\n</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"> at </span><span class="si">{</span><span class="n">overpass</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">26</span><span class="p">)</span>           <span class="c1"># Add title for the plots</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>                                                                   <span class="c1"># Remove axes from plot</span>
 <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">ETsubset</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">ETcmap</span><span class="p">);</span>                                             <span class="c1"># Plot array using colormap</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">ETsubset</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">ETsubset</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># Tower is in middle of subset</span>
 
 <span class="c1"># Add a colormap legend</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.004</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;ET (</span><span class="si">{units}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span><span class="o">.</span><span class="n">outline</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.004</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;ET (</span><span class="si">{</span><span class="n">units</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span><span class="o">.</span><span class="n">outline</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Set up file name and export to png file</span>
 <span class="n">figure_filename</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">_</span><span class="si">{}</span><span class="s2">.png&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecoName</span><span class="p">,</span> <span class="n">SDSname</span><span class="p">))</span>
@@ -13310,7 +14583,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13320,7 +14593,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -13331,7 +14604,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13349,8 +14622,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h1><center>7. Comparing Observations</center></h1><hr>
@@ -13369,7 +14641,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 <span class="nb">print</span><span class="p">(</span><span class="n">ETfootprint</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13379,7 +14651,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -13395,8 +14667,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="In-case-the-3x3-grid-contains-missing-values,-use-np.nanmedian-to-ignoring-missing-values-and-calculate-the-measure-of-central-tendency.">In case the 3x3 grid contains missing values, use <code>np.nanmedian</code> to ignoring missing values and calculate the measure of central tendency.<a class="anchor-link" href="#In-case-the-3x3-grid-contains-missing-values,-use-np.nanmedian-to-ignoring-missing-values-and-calculate-the-measure-of-central-tendency.">&#182;</a></h4>
 </div>
@@ -13409,10 +14680,10 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ETmedian</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmedian</span><span class="p">(</span><span class="n">ETfootprint</span><span class="p">)</span>
 <span class="n">UNmedian</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmedian</span><span class="p">(</span><span class="n">UNfootprint</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Median ET: </span><span class="si">{ETmedian:0.3f}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Uncertainty: </span><span class="si">{UNmedian:0.3f}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Median ET: </span><span class="si">{</span><span class="n">ETmedian</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">Uncertainty: </span><span class="si">{</span><span class="n">UNmedian</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13422,7 +14693,7 @@ C:\ECOSTRESS\output\ECOSTRESS_L3_ET_PT-JPL_00468_007_20180805T220314_0502_02_ETi
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -13437,8 +14708,7 @@ Uncertainty: 161.677
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Next,-generate-a-probability-density-function-for-the-3x3-grid-of-ET-values.">Next, generate a probability density function for the 3x3 grid of ET values.<a class="anchor-link" href="#Next,-generate-a-probability-density-function-for-the-3x3-grid-of-ET-values.">&#182;</a></h4>
 </div>
@@ -13450,11 +14720,11 @@ Uncertainty: 161.677
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="n">title</span><span class="p">:</span> <span class="n">ETfootprint</span><span class="o">.</span><span class="n">flatten</span><span class="p">()})</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">kde</span><span class="p">()</span>                                   <span class="c1"># Pandas Kernel Density Estimate</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Probability Density of </span><span class="si">{SDSname}</span><span class="s1"> Surrounding US-CZ3</span><span class="se">\n</span><span class="si">{date}</span><span class="s1"> at </span><span class="si">{overpass}</span><span class="s1">&#39;</span><span class="p">);</span>  <span class="c1"># Title</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{SDSname}</span><span class="s1"> (</span><span class="si">{units}</span><span class="s1">)&#39;</span><span class="p">);</span>                                                       <span class="c1"># X-axis label</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Probability Density of </span><span class="si">{</span><span class="n">SDSname</span><span class="si">}</span><span class="s1"> Surrounding US-CZ3</span><span class="se">\n</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1"> at </span><span class="si">{</span><span class="n">overpass</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">);</span>  <span class="c1"># Title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">SDSname</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">units</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">);</span>                                                       <span class="c1"># X-axis label</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13464,7 +14734,7 @@ Uncertainty: 161.677
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13482,8 +14752,7 @@ Uncertainty: 161.677
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="7b.-Visualize-Ground-Observations">7b. Visualize Ground Observations<a class="anchor-link" href="#7b.-Visualize-Ground-Observations">&#182;</a></h2><h4 id="Next,-examine-the-series-of-eddy-covariance-observations-from-the-AmeriFlux-US-CZ3-dataset.">Next, examine the series of eddy covariance observations from the AmeriFlux US-CZ3 dataset.<a class="anchor-link" href="#Next,-examine-the-series-of-eddy-covariance-observations-from-the-AmeriFlux-US-CZ3-dataset.">&#182;</a></h4>
@@ -13498,14 +14767,14 @@ Uncertainty: 161.677
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>                                                                      <span class="c1"># Set fig size (x,y)</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>                                                                             <span class="c1"># Create a subplot</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">towerData</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span> <span class="n">towerData</span><span class="o">.</span><span class="n">LE</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>                                     <span class="c1"># Plot as a black line</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Time Series of Eddy Covariance Data at Site US-CZ3&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">);</span>  <span class="c1"># Set Title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time Series of Eddy Covariance Data at Site US-CZ3&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">);</span>  <span class="c1"># Set Title</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Latent Heat (W/m^2)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>                                                    <span class="c1"># Y-axis label</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Time of Day (</span><span class="si">{date}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>                                                  <span class="c1"># X-axis label</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time of Day (</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>                                                  <span class="c1"># X-axis label</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">towerData</span><span class="o">.</span><span class="n">Time</span><span class="p">));</span>                                                              <span class="c1"># Set the x ticks</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">towerData</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>                                          <span class="c1"># Set x tick labels</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13515,7 +14784,7 @@ Uncertainty: 161.677
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13533,16 +14802,14 @@ Uncertainty: 161.677
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Above,-we-can-see-the-daily-range-in-Latent-Heat-as-captured-by-the-eddy-covariance-observations-on-the-flux-tower.">Above, we can see the daily range in Latent Heat as captured by the eddy covariance observations on the flux tower.<a class="anchor-link" href="#Above,-we-can-see-the-daily-range-in-Latent-Heat-as-captured-by-the-eddy-covariance-observations-on-the-flux-tower.">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="7c.-Combine-ECOSTRESS-and-Ground-Observations">7c. Combine ECOSTRESS and Ground Observations<a class="anchor-link" href="#7c.-Combine-ECOSTRESS-and-Ground-Observations">&#182;</a></h2><h4 id="Finally,-compare-the-ECOSTRESS-Evapotranspiration-and-uncertainty-with-the-time-series-of-observations-from-the-flux-tower.">Finally, compare the ECOSTRESS Evapotranspiration and uncertainty with the time series of observations from the flux tower.<a class="anchor-link" href="#Finally,-compare-the-ECOSTRESS-Evapotranspiration-and-uncertainty-with-the-time-series-of-observations-from-the-flux-tower.">&#182;</a></h4>
@@ -13564,19 +14831,19 @@ Uncertainty: 161.677
 <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">overpass</span><span class="p">,</span> <span class="n">ETmedian</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">UNmedian</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">capthick</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Set x/y axes and labels</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Time of Day (</span><span class="si">{date}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time of Day (</span><span class="si">{</span><span class="n">date</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">);</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">towerData</span><span class="o">.</span><span class="n">Time</span><span class="p">));</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">towerData</span><span class="o">.</span><span class="n">Time</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">);</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Latent Heat Flux (Wm2)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
 
 <span class="c1"># Add a title and export figure as png file</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Time Series of Eddy Covariance Data at Site US-CZ3</span><span class="se">\n</span><span class="s2"> vs. </span><span class="si">{title}</span><span class="s2"> (</span><span class="si">{SDSname}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time Series of Eddy Covariance Data at Site US-CZ3</span><span class="se">\n</span><span class="s2"> vs. </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">SDSname</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 <span class="n">figure_filename</span> <span class="o">=</span> <span class="n">join</span><span class="p">(</span><span class="n">outDir</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">_</span><span class="si">{}</span><span class="s2">_vs_fluxtower.png&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecoName</span><span class="p">,</span> <span class="n">SDSname</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;figure filename: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">figure_filename</span><span class="p">))</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">figure_filename</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -13586,7 +14853,7 @@ Uncertainty: 161.677
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
@@ -13597,7 +14864,7 @@ Uncertainty: 161.677
 
 <div class="output_area">
 
-<div class="prompt"></div>
+    <div class="prompt"></div>
 
 
 
@@ -13615,8 +14882,7 @@ Uncertainty: 161.677
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <h2 id="Citations">Citations<a class="anchor-link" href="#Citations">&#182;</a></h2><ul>
@@ -13633,8 +14899,7 @@ Uncertainty: 161.677
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><div class="alert alert-block alert-info"></p>
